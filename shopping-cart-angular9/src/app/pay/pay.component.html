@@ -1,0 +1,25 @@
+<h3>Pay</h3>
+
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+  <div>
+    <label for="idCard">
+      Id Card
+    </label>
+    <input id="idCard" type="text" formControlName="idCard">
+  </div>
+
+  <div>
+    <label for="bank">
+      Bank
+    </label>
+    <input id="banck" type="text" formControlName="bank">
+  </div>
+
+  <button class="button" type="submit">Send Payment</button>
+
+</form>
